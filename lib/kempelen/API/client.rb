@@ -22,7 +22,10 @@ module Kempelen
       def initialize(access_key, secret_key, environment = :production) 
         @access_key = access_key
         @secret_key = secret_key
+
         @environment = environment.to_sym
+
+        raise ArgumentError.new("Unknown environment") if SERVICE_URLS[@environment].nil?
       end
 
       def service_name
