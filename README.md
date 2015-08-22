@@ -1,10 +1,9 @@
 # Kempelen
 
-[![Circle CI](https://circleci.com/gh/forefrontlabs/kempelen/tree/master.svg?style=svg)](https://circleci.com/gh/forefrontlabs/kempelen/tree/master)
-
+[![Circle CI](https://img.shields.io/circleci/project/forefrontlabs/kempelen.svg)](https://circleci.com/gh/forefrontlabs/kempelen/tree/master)
 [![Coverage Status](https://coveralls.io/repos/forefrontlabs/kempelen/badge.svg?branch=master&service=github)](https://coveralls.io/github/forefrontlabs/kempelen?branch=master)
-
-
+[![Code Climate](https://codeclimate.com/github/forefrontlabs/kempelen/badges/gpa.svg)](https://codeclimate.com/github/forefrontlabs/kempelen)
+[![Gemnasium](https://img.shields.io/gemnasium/forefrontlabs/kempelen.svg)](https://gemnasium.com/forefrontlabs/kempelen)
 
 ## Installation
 
@@ -38,8 +37,9 @@ to [rubygems.org](https://rubygems.org).
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/forefrontlabs/kempelen. This 
-project is intended to be a safe, welcoming space for collaboration, and contributors are expected to 
+Bug reports and pull requests are welcome on GitHub at [https://github.com/forefrontlabs/kempelen](https://gemnasium.com/forefrontlabs/kempelen). 
+
+This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to 
 adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
 ## License
