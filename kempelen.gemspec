@@ -29,7 +29,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "ruby-hmac", "~> 0.4.0"
 
-  spec.add_development_dependency "bundler", "~> 1.10"
+  spec.add_development_dependency "bundler", "~> 1.9"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "minitest", "~> 5.8.0"
   spec.add_development_dependency "minitest-reporters", "~> 1.0.20"
