@@ -18,7 +18,9 @@ module Kempelen
         page_size: "PageSize",
         page_number: "PageNumber",
         sort_property: "SortProperty",
-        sort_direction: "SortDirection"
+        sort_direction: "SortDirection",
+        assignment_id: "AssigmentId",
+        requester_feedback: "RequesterFeedback"
       }
 
       ARRAY_PARAMETERS = {

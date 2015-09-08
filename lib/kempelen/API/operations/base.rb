@@ -33,8 +33,10 @@ module Kempelen
           @parameters.each do |name, value|
             aws_name = Kempelen::API::Operations::PARAMETERS[name]
             if !aws_name.nil?
-              request_str += "&" unless request_str.empty?
-              request_str += "#{aws_name}=#{CGI.escape(value.to_s)}"
+              unless value.nil?
+                request_str += "&" unless request_str.empty?
+                request_str += "#{aws_name}=#{CGI.escape(value.to_s)}"
+              end
             else
               aws_name = Kempelen::API::Operations::ARRAY_PARAMETERS[name]
               unless aws_name.nil?
