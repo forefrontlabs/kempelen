@@ -10,6 +10,8 @@ require "kempelen/API/operations/get_account_balance"
 require "kempelen/API/operations/force_expire_hit"
 require "kempelen/API/operations/approve_assignment"
 require "kempelen/API/operations/reject_assignment"
+require "kempelen/API/operations/get_assignments_for_hit"
+require "kempelen/API/operations/set_hit_as_reviewing"
 
 module Kempelen
   # Your code goes here...
