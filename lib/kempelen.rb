@@ -9,6 +9,7 @@ require "kempelen/API/operations/get_reviewable_hits"
 require "kempelen/API/operations/get_account_balance"
 require "kempelen/API/operations/force_expire_hit"
 require "kempelen/API/operations/approve_assignment"
+require "kempelen/API/operations/reject_assignment"
 
 module Kempelen
   # Your code goes here...
