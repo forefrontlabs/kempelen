@@ -9,29 +9,31 @@ module Kempelen
         attr_accessor :sort_property
         attr_accessor :sort_direction
 
-        AWS_OPERATION_NAME = "GetReviewableHITs"
+        AWS_OPERATION_NAME = "GetReviewableHITs".freeze
+        AWS_DEFAULT_PAGE_SIZE = 100
+        AWS_DEFAULT_PAGE_NUMBER = 1
 
         def initialize(client, hit_type_id)
           super(client)
 
           @hit_type_id = hit_type_id
           @status = :reviewable
-          @page_size = 100
-          @page_number = 1
+          @page_size = AWS_DEFAULT_PAGE_SIZE
+          @page_number = AWS_DEFAULT_PAGE_NUMBER
           @sort_property = :enumeration
           @sort_direction = :descending
         end
 
         def amazon_status
-          @status.to_s.capitalize
+          @status.to_s.capitalize.freeze
         end
 
         def amazon_sort_property
-          @sort_property.to_s.capitalize
+          @sort_property.to_s.capitalize.freeze
         end
 
         def amazon_sort_direction
-          @sort_direction.to_s.capitalize
+          @sort_direction.to_s.capitalize.freeze
         end
 
         def create_parameters

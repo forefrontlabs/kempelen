@@ -4,7 +4,7 @@ module Kempelen
       class ForceExpireHit < Base
         attr_accessor :hit_id
 
-        AWS_OPERATION_NAME = "ForceExpireHIT"
+        AWS_OPERATION_NAME = "ForceExpireHIT".freeze
 
         def initialize(client, hit_id)
           super(client)

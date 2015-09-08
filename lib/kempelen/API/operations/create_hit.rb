@@ -10,7 +10,7 @@ module Kempelen
         attr_accessor :requester_annotation
         attr_accessor :unique_request_token
 
-        AWS_OPERATION_NAME = "CreateHIT"
+        AWS_OPERATION_NAME = "CreateHIT".freeze
 
         def initialize(client, hit_type_id, lifetime_in_seconds, &block)
           super(client)

@@ -12,12 +12,12 @@ module Kempelen
 
       # URLs for Mechanical Turk APIs, indexed by environment.
       SERVICE_URLS = {
-        sandbox: 'https://mechanicalturk.sandbox.amazonaws.com',
-        production: 'https://mechanicalturk.amazonaws.com'
+        sandbox: 'https://mechanicalturk.sandbox.amazonaws.com'.freeze,
+        production: 'https://mechanicalturk.amazonaws.com'.freeze
       }
 
       # Service name of the Mechanical Turk API.
-      SERVICE_NAME = "AWSMechanicalTurkRequester"
+      SERVICE_NAME = "AWSMechanicalTurkRequester".freeze
 
       def initialize(access_key, secret_key, environment = :production) 
         @access_key = access_key
@@ -25,7 +25,7 @@ module Kempelen
 
         @environment = environment.to_sym
 
-        raise ArgumentError.new("Unknown environment") if SERVICE_URLS[@environment].nil?
+        raise ArgumentError.new("Unknown environment".freeze) if SERVICE_URLS[@environment].nil?
       end
 
       def service_name

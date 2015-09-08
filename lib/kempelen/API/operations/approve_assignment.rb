@@ -5,7 +5,8 @@ module Kempelen
         attr_accessor :assignment_id
         attr_accessor :requester_feedback
 
-        AWS_OPERATION_NAME = "ApproveAssignment"
+        AWS_OPERATION_NAME = "ApproveAssignment".freeze
+        FEEDBACK_MAX_SIZE = 1024
 
         def initialize(client, assignment_id, requester_feedback = nil)
           super(client)
@@ -17,7 +18,7 @@ module Kempelen
         def create_parameters
           @parameters[:operation] = AWS_OPERATION_NAME
           @parameters[:assignment_id] = @assignment_id
-          @parameters[:requester_feedback] = @requester_feedback.slice(0, 1024) unless @requester_feedback.nil?
+          @parameters[:requester_feedback] = @requester_feedback.slice(0, FEEDBACK_MAX_SIZE) unless @requester_feedback.nil?
 
           super 
         end

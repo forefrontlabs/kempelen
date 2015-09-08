@@ -2,7 +2,7 @@ module Kempelen
   module API
     module Operations
       class GetAccountBalance < Base
-        AWS_OPERATION_NAME = "GetAccountBalance"
+        AWS_OPERATION_NAME = "GetAccountBalance".freeze
 
         def initialize(client)
           super(client)

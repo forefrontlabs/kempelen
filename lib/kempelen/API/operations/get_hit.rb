@@ -4,7 +4,7 @@ module Kempelen
       class GetHit < Base
         attr_accessor :hit_id
 
-        AWS_OPERATION_NAME = "GetHIT"
+        AWS_OPERATION_NAME = "GetHIT".freeze
 
         def initialize(client, hit_id)
           super(client)
