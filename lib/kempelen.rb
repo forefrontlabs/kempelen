@@ -12,6 +12,7 @@ require "kempelen/API/operations/approve_assignment"
 require "kempelen/API/operations/reject_assignment"
 require "kempelen/API/operations/get_assignments_for_hit"
 require "kempelen/API/operations/set_hit_as_reviewing"
+require "kempelen/API/operations/register_hit_type"
 
 module Kempelen
   # Your code goes here...

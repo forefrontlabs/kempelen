@@ -22,7 +22,14 @@ module Kempelen
         assignment_id: "AssigmentId".freeze,
         requester_feedback: "RequesterFeedback".freeze,
         assignment_status: "AssignmentStatus".freeze,
-        revert: "Revert".freeze
+        revert: "Revert".freeze,
+        title: "Title".freeze,
+        description: "Description".freeze,
+        reward: "Reward".freeze,
+        assignment_duration: "AssignmentDurationInSeconds".freeze,
+        keywords: "Keywords".freeze,
+        auto_approval_delay: "AutoApprovalDelayInSeconds".freeze,
+        qualification_requirement: "QualificationRequirement".freeze
       }
 
       ARRAY_PARAMETERS = {
