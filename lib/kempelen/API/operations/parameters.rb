@@ -13,7 +13,12 @@ module Kempelen
         max_assignments: "MaxAssignments",
         requester_annotation: "RequesterAnnotation",
         unique_request_token: "UniqueRequestToken",
-        hit_id: "HITId"
+        hit_id: "HITId",
+        status: "Status",
+        page_size: "PageSize",
+        page_number: "PageNumber",
+        sort_property: "SortProperty",
+        sort_direction: "SortDirection"
       }
 
       ARRAY_PARAMETERS = {
