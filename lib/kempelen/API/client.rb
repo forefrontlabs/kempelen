@@ -35,6 +35,11 @@ module Kempelen
       def service_url
         SERVICE_URLS[@environment]
       end
+
+      def perform_request(query_string, response_object)
+        response = HTTParty.get(query_string)
+        response.parsed_response[response_object]
+      end
     end
   end
 end

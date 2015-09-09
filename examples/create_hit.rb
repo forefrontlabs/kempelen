@@ -16,5 +16,5 @@ end
   op.add_layout_parameter "link", "http://alt-usage-english.org/can_a_cat_man.wav"
 end
 
-response = HTTParty.get(@operation.create_request_string, debug_output: $stdout)
-puts response.parsed_response
+create_hit_response = @operation.perform_operation
+puts create_hit_response.inspect

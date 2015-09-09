@@ -10,6 +10,9 @@ module Kempelen
         attr_accessor :client
         attr_accessor :parameters
         attr_accessor :timestamp
+        attr_accessor :response_object
+        attr_accessor :query_string
+        attr_accessor :raw_response
 
         def initialize(client)
           @client = client
@@ -25,6 +28,7 @@ module Kempelen
           @parameters[:signature] = (Base64.encode64 HMAC::SHA1.digest(client.secret_key, string_to_sign)).strip
         end
 
+        # TODO: Reduce the complexity of this method.
         def create_request_string
           create_parameters
 
@@ -54,8 +58,13 @@ module Kempelen
             end
           end
 
-          "#{client.service_url}?#{request_str}"
+          @query_string = "#{client.service_url}?#{request_str}"
         end
+
+        def perform_operation
+          @raw_response = @client.perform_request(@query_string, @response_object)
+        end
+
       end
     end
   end

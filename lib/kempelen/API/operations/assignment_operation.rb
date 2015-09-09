@@ -22,6 +22,14 @@ module Kempelen
 
           super
         end
+
+        def perform_operation
+          create_request_string
+
+          super
+
+          Kempelen::API::Responses::EmptyResponse.new(@raw_response)
+        end
       end
     end
   end

@@ -12,5 +12,5 @@ end
 @client = Kempelen::API::Client.new(ARGV[0], ARGV[1], :sandbox)
 @operation = Kempelen::API::Operations::GetHit.new(@client, ARGV[2])
 
-response = HTTParty.get(@operation.create_request_string, debug_output: $stdout)
-puts response.parsed_response
+get_hit_response = @operation.perform_operation
+puts get_hit_response.inspect

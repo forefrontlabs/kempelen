@@ -11,6 +11,7 @@ module Kempelen
         attr_accessor :unique_request_token
 
         AWS_OPERATION_NAME = "CreateHIT".freeze
+        AWS_RESPONSE_OBJECT = "CreateHITResponse".freeze
 
         def initialize(client, hit_type_id, lifetime_in_seconds, &block)
           super(client)
@@ -19,6 +20,7 @@ module Kempelen
           @lifetime_in_seconds = lifetime_in_seconds.to_i
           @layout_parameters = []
           @max_assignments = 1
+          @response_object = AWS_RESPONSE_OBJECT
 
           yield self unless block == nil
         end
@@ -38,6 +40,14 @@ module Kempelen
           @parameters[:unique_request_token] = @unique_request_token unless @unique_request_token.nil?
 
           super 
+        end
+
+        def perform_operation
+          create_request_string
+
+          super
+
+          Kempelen::API::Responses::HitResponse.new(@raw_response)
         end
       end
     end
