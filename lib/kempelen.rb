@@ -3,6 +3,7 @@ require "kempelen/version"
 require "kempelen/API/client"
 
 require "kempelen/API/common/price"
+require "kempelen/API/common/assignment"
 
 require "kempelen/API/responses/base"
 require "kempelen/API/responses/error_response"
@@ -10,6 +11,7 @@ require "kempelen/API/responses/empty_response"
 require "kempelen/API/responses/hit_response"
 require "kempelen/API/responses/account_balance_response"
 require "kempelen/API/responses/reviewable_hits_response"
+require "kempelen/API/responses/get_assignments_response"
 
 require "kempelen/API/operations/base"
 require "kempelen/API/operations/parameters"

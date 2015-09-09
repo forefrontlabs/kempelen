@@ -19,7 +19,7 @@ module Kempelen
         page_number: "PageNumber".freeze,
         sort_property: "SortProperty".freeze,
         sort_direction: "SortDirection".freeze,
-        assignment_id: "AssigmentId".freeze,
+        assignment_id: "AssignmentId".freeze,
         requester_feedback: "RequesterFeedback".freeze,
         assignment_status: "AssignmentStatus".freeze,
         revert: "Revert".freeze,

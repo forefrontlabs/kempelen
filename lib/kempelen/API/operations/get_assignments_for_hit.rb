@@ -7,6 +7,7 @@ module Kempelen
         attr_accessor :page_number
 
         AWS_OPERATION_NAME = "GetAssignmentsForHIT".freeze
+        AWS_RESPONSE_OBJECT = "GetAssignmentsForHITResponse".freeze
         AWS_DEFAULT_PAGE_SIZE = 10
         AWS_DEFAULT_PAGE_NUMBER = 1
 
@@ -14,6 +15,7 @@ module Kempelen
           super(client, hit_id)
 
           @operation_name = AWS_OPERATION_NAME
+          @response_object = AWS_RESPONSE_OBJECT
           @assignment_status = nil
           @page_size = AWS_DEFAULT_PAGE_SIZE
           @page_number = AWS_DEFAULT_PAGE_NUMBER
@@ -25,6 +27,14 @@ module Kempelen
           @parameters[:page_number] = @page_number
 
           super
+        end
+
+        def perform_operation
+          create_request_string
+
+          super
+
+          Kempelen::API::Responses::GetAssignmentsResponse.new(@raw_response)
         end
       end
     end

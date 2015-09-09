@@ -31,7 +31,6 @@ module Kempelen
               end
             end
           end
-
         end
       end
     end
