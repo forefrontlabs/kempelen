@@ -10,12 +10,14 @@ module Kempelen
         attr_accessor :sort_direction
 
         AWS_OPERATION_NAME = "GetReviewableHITs".freeze
+        AWS_RESPONSE_OBJECT = "GetReviewableHITsResponse".freeze
         AWS_DEFAULT_PAGE_SIZE = 100
         AWS_DEFAULT_PAGE_NUMBER = 1
 
         def initialize(client, hit_type_id)
           super(client)
 
+          @response_object = AWS_RESPONSE_OBJECT
           @hit_type_id = hit_type_id
           @status = :reviewable
           @page_size = AWS_DEFAULT_PAGE_SIZE
@@ -46,6 +48,14 @@ module Kempelen
           @parameters[:sort_direction] = amazon_sort_direction
 
           super
+        end
+
+        def perform_operation
+          create_request_string
+
+          super
+
+          Kempelen::API::Responses::ReviewableHitsResponse.new(@raw_response)
         end
       end
     end

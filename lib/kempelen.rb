@@ -9,6 +9,7 @@ require "kempelen/API/responses/error_response"
 require "kempelen/API/responses/empty_response"
 require "kempelen/API/responses/hit_response"
 require "kempelen/API/responses/account_balance_response"
+require "kempelen/API/responses/reviewable_hits_response"
 
 require "kempelen/API/operations/base"
 require "kempelen/API/operations/parameters"
