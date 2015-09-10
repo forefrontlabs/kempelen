@@ -23,7 +23,7 @@ module Kempelen
           assignment.auto_approval_time = DateTime.parse(response["AutoApprovalTime"]) rescue nil
           assignment.accept_time = DateTime.parse(response["AcceptTime"]) rescue nil
           assignment.submit_time = DateTime.parse(response["SubmitTime"]) rescue nil
-          assignment.answer = response["Answer"]
+          assignment.answer = QuestionFormAnswers.new(response["Answer"])
 
           assignment
         end

@@ -4,6 +4,8 @@ require "kempelen/API/client"
 
 require "kempelen/API/common/price"
 require "kempelen/API/common/assignment"
+require "kempelen/API/common/answers"
+require "kempelen/API/common/question_form_answers"
 
 require "kempelen/API/responses/base"
 require "kempelen/API/responses/error_response"
