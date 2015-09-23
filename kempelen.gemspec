@@ -21,6 +21,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "ruby-hmac", "~> 0.4.0"
   spec.add_dependency "nori", "~> 2.6.0"
+  spec.add_dependency "httparty", "~> 0.13.6"
 
   spec.add_development_dependency "bundler", "~> 1.9"
   spec.add_development_dependency "rake", "~> 10.0"
@@ -28,7 +29,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "minitest-reporters", "~> 1.0.20"
   spec.add_development_dependency "pry"
   spec.add_development_dependency "pry-byebug"
-  spec.add_development_dependency "httparty"
   spec.add_development_dependency "guard"
   spec.add_development_dependency "guard-minitest"
   spec.add_development_dependency "coveralls"

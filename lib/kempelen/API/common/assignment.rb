@@ -28,6 +28,9 @@ module Kempelen
           assignment
         end
 
+        def answer_question(question_identifier, index = 0)
+          @answer.get_answer(question_identifier, index)
+        end
       end
     end
   end

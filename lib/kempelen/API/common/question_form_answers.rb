@@ -47,6 +47,10 @@ module Kempelen
             end
           end
         end
+
+        def get_answer(question_identifier, index = 0)
+          @answers.select {|a| a.question_identifier == question_identifier}[index] rescue nil
+        end
       end
     end
   end
