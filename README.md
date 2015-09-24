@@ -5,6 +5,10 @@
 [![Code Climate](https://codeclimate.com/github/forefrontlabs/kempelen/badges/gpa.svg)](https://codeclimate.com/github/forefrontlabs/kempelen)
 [![Gemnasium](https://img.shields.io/gemnasium/forefrontlabs/kempelen.svg)](https://gemnasium.com/forefrontlabs/kempelen)
 
+Kempelen is a modern Mechanical Turk integration gem.
+
+Note that note all usage cases are covered by this gem at this time.  It is focused on the use cases we needed right now.  More cases will be added in the future.  If you need something right now, feel free to push us a pull request (see Contributing below).
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -23,7 +27,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+In general:
+
+  * Create a client
+  * Create an operation
+  * `result = operation.perform_operation`
+  * Work with the result
+
+See the examples directory for some specific examples of usage.
 
 ## Development
 
