@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Brian Nelson"]
   spec.email         = ["brian@forefrontlabs.com"]
 
-  spec.summary       = %q{Ruby integration with Mechanical Turk.}
-  spec.description   = %q{Native Ruby integration with Mechanical Turk.}
+  spec.summary       = %q{Ruby integration with Amazon's Mechanical Turk}
+  spec.description   = %q{Modern Ruby integration with Amazon's Mechanical Turk.}
   spec.homepage      = "https://github.com/forefrontlabs/kempelen"
   spec.license       = "MIT"
 
