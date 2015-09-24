@@ -4,6 +4,7 @@
 [![Coverage Status](https://coveralls.io/repos/forefrontlabs/kempelen/badge.svg?branch=master&service=github)](https://coveralls.io/github/forefrontlabs/kempelen?branch=master)
 [![Code Climate](https://codeclimate.com/github/forefrontlabs/kempelen/badges/gpa.svg)](https://codeclimate.com/github/forefrontlabs/kempelen)
 [![Gemnasium](https://img.shields.io/gemnasium/forefrontlabs/kempelen.svg)](https://gemnasium.com/forefrontlabs/kempelen)
+[![Gem Version](https://badge.fury.io/rb/kempelen.svg)](http://badge.fury.io/rb/kempelen)
 
 Kempelen is a modern Mechanical Turk integration gem.
 
