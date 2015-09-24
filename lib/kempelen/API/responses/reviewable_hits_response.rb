@@ -27,7 +27,7 @@ module Kempelen
             hits_response = hit_response["HIT"]
             unless hits_response.nil?
               hits_response.each do |hit|
-                @hits << hit["HITId"]
+                @hits << hit["HITId"] unless hit.nil? or !hit.is_a?(Hash)
               end
             end
           end
