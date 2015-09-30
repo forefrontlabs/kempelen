@@ -14,14 +14,16 @@ module Kempelen
         def load_from_response(response)
           @request_id = response["OperationRequest"]["RequestId"] rescue nil
 
-          response.each_key do |k|
-            if response[k].has_key?("Request")
-              request_response = response[k]["Request"]
-              @success = (request_response["IsValid"] == "True")
+          unless response.nil?
+            response.each_key do |k|
+              if response[k].has_key?("Request")
+                request_response = response[k]["Request"]
+                @success = (request_response["IsValid"] == "True")
 
-              if request_response.has_key?("Errors")
-                @success = false
-                @error = ErrorResponse.new(request_response["Errors"])
+                if request_response.has_key?("Errors")
+                  @success = false
+                  @error = ErrorResponse.new(request_response["Errors"])
+                end
               end
             end
           end
