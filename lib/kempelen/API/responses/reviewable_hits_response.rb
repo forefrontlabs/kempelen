@@ -18,6 +18,8 @@ module Kempelen
         def load_from_response(response)
           super(response)
 
+          return if response.nil?
+
           hit_response = response["GetReviewableHITsResult"]
           unless hit_response.nil?
             @number_of_results = hit_response["NumResults"].to_i
