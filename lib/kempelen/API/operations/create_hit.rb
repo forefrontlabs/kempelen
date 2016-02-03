@@ -10,6 +10,16 @@ module Kempelen
         attr_accessor :requester_annotation
         attr_accessor :unique_request_token
 
+        attr_accessor :reward_amount
+        attr_accessor :currency_code
+        attr_accessor :keywords
+        attr_accessor :title
+        attr_accessor :description
+        attr_accessor :assignment_duration
+        attr_accessor :auto_approval_delay
+
+        attr_accessor :qualification_requirements
+
         AWS_OPERATION_NAME = "CreateHIT".freeze
         AWS_RESPONSE_OBJECT = "CreateHITResponse".freeze
 
@@ -22,6 +32,11 @@ module Kempelen
           @max_assignments = 1
           @response_object = AWS_RESPONSE_OBJECT
 
+          @reward_amount = 0.0
+          @currency_code = "USD".freeze
+
+          @qualification_requirements = []
+
           yield self unless block == nil
         end
 
@@ -31,7 +46,18 @@ module Kempelen
 
         def create_parameters
           @parameters[:operation] = AWS_OPERATION_NAME
-          @parameters[:hit_type_id] = @hit_type_id
+
+          if @hit_type_id.nil?
+            @parameters[:assignment_duration] = @assignment_duration
+            @parameters[:auto_approval_delay] = @auto_approval_delay
+            @parameters[:title] = @title
+            @parameters[:description] = @description
+            @parameters[:keywords] = @keywords
+            @parameters[:reward_amount] = [{Amount: @reward_amount, CurrencyCode: @currency_code}]
+            @parameters[:qualification_requirements] = @qualification_requirements unless @qualification_requirements.empty?
+          else
+            @parameters[:hit_type_id] = @hit_type_id
+          end
           @parameters[:lifetime_in_seconds] = @lifetime_in_seconds
           @parameters[:max_assignments] = @max_assignments
           @parameters[:layout_id] = @layout_id unless @layout_id.nil?

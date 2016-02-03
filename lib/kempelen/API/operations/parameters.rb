@@ -33,7 +33,9 @@ module Kempelen
       }
 
       ARRAY_PARAMETERS = {
-        layout_parameters: "HITLayoutParameter".freeze
+        qualification_requirements: "QualificationRequirement".freeze,
+        layout_parameters: "HITLayoutParameter".freeze,
+        reward_amount: "Reward".freeze
       }
     end
   end

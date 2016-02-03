@@ -10,7 +10,7 @@ module Kempelen
         attr_accessor :auto_approval_delay
 
         # TODO: Support qualification requirements
-        attr_accessor :qualification_requirement
+        #attr_accessor :qualification_requirement
 
         AWS_OPERATION_NAME = "RegisterHITType".freeze
 
