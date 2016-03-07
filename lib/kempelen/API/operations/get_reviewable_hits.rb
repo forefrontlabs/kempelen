@@ -14,7 +14,7 @@ module Kempelen
         AWS_DEFAULT_PAGE_SIZE = 100
         AWS_DEFAULT_PAGE_NUMBER = 1
 
-        def initialize(client, hit_type_id)
+        def initialize(client, hit_type_id = nil)
           super(client)
 
           @response_object = AWS_RESPONSE_OBJECT
@@ -40,7 +40,7 @@ module Kempelen
 
         def create_parameters
           @parameters[:operation] = AWS_OPERATION_NAME
-          @parameters[:hit_type_id] = @hit_type_id
+          @parameters[:hit_type_id] = @hit_type_id unless @hit_type_id.nil?
           @parameters[:status] = amazon_status
           @parameters[:page_size] = @page_size
           @parameters[:page_number] = @page_number
