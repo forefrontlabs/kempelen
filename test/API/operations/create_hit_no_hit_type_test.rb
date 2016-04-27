@@ -64,8 +64,6 @@ module Kempelen
           request_uri = URI(request_string)
           parameters = CGI::parse(request_uri.query)
 
-          puts request_string
-
           assert_empty parameters[Kempelen::API::Operations::PARAMETERS[:hit_type_id]]
           assert_equal @operation.parameters[:operation],
                        parameters[Kempelen::API::Operations::PARAMETERS[:operation]].first

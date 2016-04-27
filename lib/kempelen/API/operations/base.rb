@@ -52,6 +52,9 @@ module Kempelen
                       request_str += "&" unless request_str.empty?
                       request_str += "#{aws_name}.#{idx + 1}.#{k}=#{CGI.escape(v.to_s)}"
                     end
+                  else
+                    request_str += "&" unless request_str.empty?
+                    request_str += "#{aws_name}.#{idx + 1}=#{CGI.escape(hash_value.to_s)}"
                   end
                 end
               end
