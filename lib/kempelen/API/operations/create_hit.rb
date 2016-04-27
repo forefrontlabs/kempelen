@@ -28,10 +28,14 @@ module Kempelen
 
           @hit_type_id = hit_type_id
           @lifetime_in_seconds = lifetime_in_seconds.to_i
+          @layout_id = nil
+          @requester_annotation = nil
+          @unique_request_token = nil
           @layout_parameters = []
           @max_assignments = 1
           @response_object = AWS_RESPONSE_OBJECT
 
+          @auto_approval_delay = 2592000
           @reward_amount = 0.0
           @currency_code = "USD".freeze
 

@@ -29,13 +29,16 @@ module Kempelen
         assignment_duration: "AssignmentDurationInSeconds".freeze,
         keywords: "Keywords".freeze,
         auto_approval_delay: "AutoApprovalDelayInSeconds".freeze,
-        qualification_requirement: "QualificationRequirement".freeze
+        qualification_requirement: "QualificationRequirement".freeze,
+        subject: "Subject".freeze,
+        message_text: "MessageText".freeze
       }
 
       ARRAY_PARAMETERS = {
         qualification_requirements: "QualificationRequirement".freeze,
         layout_parameters: "HITLayoutParameter".freeze,
-        reward_amount: "Reward".freeze
+        reward_amount: "Reward".freeze,
+        worker_ids: "WorkerId".freeze
       }
     end
   end

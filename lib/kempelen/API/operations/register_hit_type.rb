@@ -21,6 +21,7 @@ module Kempelen
           @description = description
           @reward = reward
           @assignment_duration = assignment_duration
+          @auto_approval_delay = 2592000
           @keywords = []
 
           yield self unless block == nil
