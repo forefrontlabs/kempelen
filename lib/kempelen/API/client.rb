@@ -10,6 +10,9 @@ module Kempelen
       # Mechanical Turk environment to make API calls to - defaults to :production.
       attr_reader :environment
 
+      # HTTParty debug options
+      attr_accessor :debug_output
+
       # URLs for Mechanical Turk APIs, indexed by environment.
       SERVICE_URLS = {
         sandbox: 'https://mechanicalturk.sandbox.amazonaws.com'.freeze,
@@ -24,6 +27,7 @@ module Kempelen
         @secret_key = secret_key
 
         @environment = environment.to_sym
+        @debug_output = nil
 
         raise ArgumentError.new("Unknown environment".freeze) if SERVICE_URLS[@environment].nil?
       end
@@ -37,7 +41,7 @@ module Kempelen
       end
 
       def perform_request(query_string, response_object)
-        response = HTTParty.get(query_string)
+        response = HTTParty.get(query_string, debug_output: @debug_output)
         response.parsed_response[response_object]
       end
     end

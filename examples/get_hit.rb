@@ -9,7 +9,8 @@ if ARGV.length < 3
   exit
 end
 
-@client = Kempelen::API::Client.new(ARGV[0], ARGV[1], :sandbox)
+@client = Kempelen::API::Client.new(ARGV[0], ARGV[1], :production)
+@client.debug_output = $stdout
 @operation = Kempelen::API::Operations::GetHit.new(@client, ARGV[2])
 
 get_hit_response = @operation.perform_operation

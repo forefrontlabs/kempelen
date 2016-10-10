@@ -7,6 +7,8 @@ module Kempelen
         attr_accessor :worker_ids
 
         AWS_OPERATION_NAME = "NotifyWorkers".freeze
+        AWS_RESPONSE_OBJECT = "NotifyWorkersResponse".freeze
+
         SUBJECT_MAX_LENGTH = 200
         MESSAGE_MAX_LENGTH = 4096
         WORKER_IDS_MAX_LENGTH = 100
